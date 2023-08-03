@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/diploma.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+        </div>
+    </div>
+    <header>
+        <p class="major-project">major project</p>
+        <p class="name">chasing the blue bird</p>
+        <p class="year">2023</p>
+        <p class="sep">Warm summer evening <br><br><br><br><br>
+            <i>&nbsp &nbsp &nbsp I'm driving my car along a winding road <br> towards a mountain peak</i>  <br><br>
+            &nbsp &nbsp &nbsp Smooth turns flow into the curves of the car's body <br>
+ With the same smoothness I turn the steering wheel and gently pressing the gas pedal <br><br>
+ &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbspenter a slight drift
+        </p>
+        <img class="main-photo" src="assets/diploma/road1.jpg" alt="">
+
+        <div class="photo1">
+            <p>1/3</p>
+            <img src="assets/diploma/drift1.jpg" alt="">
+        </div>
+
+        <div class="photo2">
+            <p>2/3</p>
+            <img src="assets/diploma/closeup.jpg" alt="">
+        </div>
+
+        <div class="photo3">
+            <p>3/3</p>
+            <img src="assets/diploma/road2.jpg" alt="">
+        </div>
+
+        <div class="paragraph1">
+            <p>This book is an attempt to convey the obsession with the car – Renault Alpine A110 1600s. Through photographs and their arrangement, I tried to find visual relations between the dynamics of the car, its forms, and the environment. By immersing the Alpine in context, I revealed it not as a set of parts, but as a holistic system of elements with a unique character.
+            </p>
+            <img src="assets/diploma/book.jpg" alt="">
+        </div>
+
+        <div class="paragraph2">
+            <p>Through the process of creating photographs, I also touched upon the theme of studying an object that I do not possess, immersing it in an environment where I physically did not exist. These conditions became both an additional challenge for me and provided me with a freedom that is inaccessible in real life.
+            </p>
+            <img src="assets/diploma/blender.png" alt="">
+        </div>
+        <p class="p3">My inspiration song: Minoru Muraoka – Take Five</p>
+        <audio controls src="assets/diploma/Minoru_Muraoka_-_Take_Five_(musmore.com).mp3"></audio>
+    </header>
+
+    <p>gallery</p>
+    <div class="physical-photo">
+        <img class="image" src="assets/diploma/book 10.jpg" alt="">
+        <img class="image" src="assets/diploma/book 16.jpg" alt="">
+        <img class="image" src="assets/diploma/COVER.jpg" alt="">
+        <img class="image" src="assets/diploma/street1.jpg" alt="">
+        <img class="image" src="assets/diploma/street2.jpg" alt="">
+        <img class="image" src="assets/diploma/street3.jpg" alt="">
+        <img class="image" src="assets/diploma/scan1.jpeg" alt="">
+        <img class="image" src="assets/diploma/scan2.jpeg" alt="">
+        <img class="image" src="assets/diploma/scan3.jpeg" alt="">
+        <img class="image" src="assets/diploma/scan4.jpeg" alt="">
+        <img class="image" src="assets/diploma/scan5.jpeg" alt="">
+        <img class="image" src="assets/diploma/scan6.jpeg" alt="">
+    </div>
+
+    <div class="pop-up-container">
+        <img class="pop-up-image" src="assets/diploma/book 10.jpg" alt="">
+    </div>
+
+    <script>
+        document.querySelectorAll('.physical-photo img').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.pop-up-container').style.display = 'block';
+                document.querySelector('.pop-up-container img').src =  image.getAttribute('src');
+            }
+        })
+        document.querySelectorAll('.pop-up-container').forEach(image =>{
+            image.onclick = () => {
+                document.querySelector('.pop-up-container').style.display = 'none';
+            }
+        })
+    </script>
+    <div id="player"></div>
+
+    <script>
+        window.onload = function () {
+          document.body.classList.add('loaded_hiding');
+          window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+          }, 500);
+        }
+      </script>
+
+    
+</body>
+</html>

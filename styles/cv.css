@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    background-color: rgb(238, 238, 238);
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    line-height: 40px;
+    letter-spacing: 0.05rem;
+}
+
+h2 {
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: small;
+    line-height: 1.5;
+    letter-spacing: 0.07rem;
+    max-width: 75ch;
+    margin-bottom: 1.2rem;
+}
+
+.main-container{
+margin: 50px 30vw;
+}
+
+header img {
+    width: 6rem;
+    margin-right: 3rem;
+    margin-bottom: 0.2rem;
+}
+
+header{
+    align-items: center;
+}
+
+.icon-set{
+    margin-top: 0.7rem;
+    margin-bottom: 1.4rem;
+}
+a :visited{
+    color: black;
+}
+a {
+    color: black;
+}
+
+a:hover{
+    text-decoration-style: wavy;
+}
+
+.skills img{
+    height: 3.5rem;
+    margin: 0 0.1rem;
+}
+header{
+    display: flex;
+}
+
+header h2 {
+    max-width: 55ch;
+}
+@media screen and (max-width: 900px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .main-container{
+        margin:50px 7vw; ;
+        margin-bottom: 100px;
+    }
+    }

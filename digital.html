@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="styles/digital.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="preloader__row">
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+        </div>
+    </div>
+
+    <!-- wrapper -->
+    <div class="outWrapper">
+        <div class="wrapper">
+
+
+        <!-- main -->
+        <div class="starter">
+            <img src="assets/start.png" alt="">
+        </div>
+
+            <div class="framePc">
+                <img class="front" src="assets/framePC.png" alt="">
+                <a href="https://romanchernyakov.github.io/Black-Anteater/" target="_blank"></a> <img class="project" src="assets/projectsCover/blackAnteater.jpg" alt="">
+                
+                <h1>Black Anteater</h1>
+                <h2>This is the project commited to punks. Through digital and physical media I explored visual representations of punk subculture.<br><br>Этот проект посвящен панкам. Через цифровые и физические средства я исследовал визуальные репрезентации субкультуры панков.</h2>
+            </div>
+
+            <div class="framePc">
+                <img class="front" src="assets/framePC.png" alt="">
+                <a href="https://romanchernyakov.github.io/Placeholder1/index.html" target="_blank">
+                </a> <img class="project" src="assets/projectsCover/placeHolder.jpg" alt="">         
+                <h1>Placeholder</h1>
+                <h2>This is the site-catalogue for a small library Placeholder in Moscow. There I systemized about 400 books and put into a clear design that helps to find the book you need. <br> <br> Это сайт–каталог для небольшой библиотеки Placeholder в Москве. На этом сайте я создал систему из 400 книг и обернул в читсый дизайн, помогающий найти нужную вам книгу.</h2>
+            </div>
+            <div class="framePc">
+                <img class="front" src="assets/framePC.png" alt="">
+                <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+                    <source class="video" src="assets/Video.mp4" type="video/mp4" />
+                  </video>        
+                <h1>Dear evolution</h1>
+                <h2>Animation video about fictional evolution from a deer's perspective. Assembled in Adobe After Effects <br> <br> Анимационное видео о фиктивном ходе эволюции с точки зрения оленя. Проект собран в программе Adobe After Effects</h2>
+            </div>
+
+            <div class="framePc">
+                <img class="front" src="assets/framePC.png" alt="">
+                <a href="https://www.figma.com/proto/l3lz03ziz4roYmGDfWxPH5/Province?node-id=1%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=93%3A53" target="_blank"></a> <img class="project" src="assets/projectsCover/province.jpg" alt="">
+                
+                <h1>province</h1>
+                <h2>Project-exploration performed on Figma. As the object of exploration was taken central market in a small provincial town in Russia, saturated with examples of “domestic” design. <br><br>Проект-исследование, выполненный на web-платформе Figma. В качестве объекта исследования был взят центральный рынок маленького провинциального города, который был насыщен примерами "бытового" коммуникативного дизайна.</h2>
+            </div>
+
+            <div class="framePc">
+                <img class="front" src="assets/framePC.png" alt="">
+                <a href="https://romanchernyakov.github.io/DBMTSC/" target="_blank">
+                </a> <img class="project" src="assets/projectsCover/DBMTSC.jpg" alt="">         
+                <h1>DBMTSC</h1>
+                <h2>The project is performed in the format of a website, dedicated to the film "Do not threaten South Central while drinking juice in your neighborhood." Through the footage of the film, I showed some funny moments, and one of them embodied in the form of an interactive poster.<br> <br> Проект в формате сайта, посвящен фильму "Не грози южному централу, попивая сок у себя в квартале". Через кадры из фильма я показал несколько забавных моментов, а один из них воплотил в виде интерактивного постера.</h2>
+            </div>
+
+
+ <!-- exit -->
+
+            <div class="end">
+
+                <div class="buttons">
+                    <a href="index.html">
+                        <img class="exitButton" src="assets/exit.png" alt="">
+                    </a>
+
+                    <a class="doorOpen" href="index.html">
+                        <img src="assets/openDoor.jpg" alt="">
+                      </a>
+                </div>
+                <a href="physical.html">
+                    <img class="physicalButton" src="assets/physicalButton.png" alt="">
+                </a>
+                <img class="frameEnd" src="assets/frameEnd.png" alt="">
+
+              </div>
+            </div>   
+            
+        </div>
+    </div>
+
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script>
+        window.onload = function () {
+          document.body.classList.add('loaded_hiding');
+          window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+          }, 500);
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+* {
+	padding: 0;
+	margin: 0;
+	}
+body {
+    background-color: rgb(236 236 236);
+}
+
+.outWrapper {
+    width: 100vh;
+    height: 100vw;
+    top: 100vh;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+
+.bg {
+    position: relative;
+    z-index: 1;
+}
+
+.bg1 {
+    position: relative;
+}
+.bg img{
+    height: 100vh;
+}
+
+.bg1 img{
+    position: absolute;
+    height: 100vh;
+}
+
+
+.ExitButtonOn {
+    position: absolute;
+    height: 24.6vh;
+    top: 0vh;
+    left: 232.35vh;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+    .exitAbout:hover .ExitButtonOn {
+        position: absolute;
+        height: 24.6vh;
+        top: 0vh;
+        left: 232.35vh;
+        z-index: 3;
+        opacity: 1;
+    }
+
+.exitDoor{
+    position: absolute;
+    height: 100vh;
+    top: 0px;
+    left: 269.4vh;
+    z-index: 4;
+    opacity: 0;
+    transition: 0.2s;
+}
+    .exitDoor:hover {
+        position: absolute;
+        height: 100vh;
+        top: 0px;
+        left: 269.4vh;
+        z-index: 4;
+        opacity: 100%;
+    }
+
+    .exitDoor:hover > .ExitButtonOn img{
+        position: absolute;
+        height: 12vh;
+        top: 2.9vh;
+        left: 270.2vh;
+        z-index: 3;
+        opacity: 100%;
+    }
+    
+
+.cvBox {
+    position: absolute;
+    top: 25vh;
+    left: 50vh;
+    width: 69vh;
+    height: 46vh; 
+    opacity: 0.6;
+    transition: 0.2s;
+    z-index: 2;
+}
+
+.cvLink{
+    position: absolute;
+    top: 25vh;
+    left: 62vh;
+    height: 50vh;
+    opacity: 0.3;
+    transition: 200ms;
+    z-index: 0;
+}
+
+    .cvBox:hover + .cvLink{
+        position: absolute;
+        top: 25vh;
+        left: 62vh;
+        height: 50vh; 
+        opacity: 1;
+    }
+
+.gradient {
+    position: absolute;
+    top: 81vh;
+    left: 184vh;
+    height: 11vh;
+    width: 59vh;
+}
+
+.preloader {
+/*фиксированное позиционирование*/
+position: fixed;
+/* координаты положения */
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+/* фоновый цвет элемента */
+background: #45e0ff;
+/* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+z-index: 1001;
+}
+
+.preloader__row {
+    animation: preloader-rotate 5000ms infinite linear;
+}
+
+.loading {
+    transform: translate(-50% -50%);
+    margin-top: -4vw;
+    margin-left: -1.5vw;
+    font-size: 22vw;
+    font-family: sans-serif;
+    animation: preloader-bounce 3s infinite ease-in;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes preloader-bounce {
+
+0%{
+    opacity: 0;
+    letter-spacing: 100px;
+}
+
+50%{
+    opacity: 1;
+    letter-spacing: 10px;
+}
+}
+
+.loaded_hiding .preloader {
+transition-delay: 1s;
+transition: 0.3s opacity;
+opacity: 0;
+}
+
+.loaded .preloader {
+transition-delay: 2s;
+display: none;
+}
+

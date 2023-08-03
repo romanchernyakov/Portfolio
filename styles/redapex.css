@@ -1,0 +1,227 @@
+@font-face {
+	font-family: 'FuturaBookC';
+	src: url('FuturaBookC.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Magilio';
+	src: url('MagilioRegular-Yzv2O.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+    background-color: rgb(210, 246, 254);
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.background {
+    position: absolute;
+    object-position: top center;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.background img {
+    object-position: center;
+    height: 101%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+.grid-container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 2vw;
+}
+
+h1 {
+    margin-top: 5rem;
+    font-size: 21.93vw;
+    font-family: 'Magilio';
+    color: rgb(255, 77, 77);
+    grid-column: 2/12;
+    z-index: 1;
+}
+
+p {
+    font-size: 22px;
+    line-height: 1.7rem;
+    letter-spacing: 0.02rem;
+    font-family: 'FuturaBookC';
+    color: rgb(255, 77, 77);
+    z-index: 1;
+}
+
+.p1 {
+    margin-top: -4vw;
+    grid-column: 2/7;
+    z-index: 1;
+}
+
+.small-car{
+    margin-top: 14rem;
+    margin-bottom: 2rem;
+    grid-column: 6/8;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.p2 {
+    grid-row-start: 4;
+    grid-column: 2/6;
+    z-index: 1;
+}
+
+.big-car {
+    grid-row-start: 4;
+    grid-column: 7/12;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.poster-img {
+    margin-top: -5vw;
+    grid-row-start: 5;
+    grid-column: 2/7;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.poster-info {
+    grid-row-start: 5;
+    grid-column: 7/12;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.bottle {
+    grid-row-start: 6;
+    grid-column:6/7;
+    object-fit: cover;
+    margin-top: -20rem;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1000px) {
+    .p2 {
+    grid-row-start: 4;
+    grid-column: 2/7;
+    margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .small-car{
+        display: none;
+    }
+
+    .p1 {
+        margin-top: 2vw;
+        grid-row-start: 2;
+        grid-column: 2/11;
+    }
+
+    .big-car {
+        grid-row-start: 3;
+        grid-column: 7/12;
+        object-fit: cover;
+    }
+
+    .p2 {
+        grid-row-start: 4;
+        grid-column: 2/11;
+        margin-bottom: 2rem;
+    }
+
+    .poster-img {
+        margin-top: 0rem;
+        grid-row-start: 5;
+        grid-column: 2/12;
+        object-fit: cover;
+        margin-bottom: 3rem;
+    }
+
+    .poster-info {
+        grid-row-start: 6;
+        grid-column: 2/12;
+        object-fit: cover;
+        margin-bottom: 3rem;
+    }
+
+    .bottle {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        grid-row-start: 3;
+        grid-column: 3/4;
+        object-fit: cover;
+        transform: rotate(-30deg);
+        margin-left: 3rem;
+    }
+}
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #45e0ff;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+    }
+    
+    .preloader__row {
+        animation: preloader-rotate 5000ms infinite linear;
+        margin-top: -10vw;
+    }
+
+    .loading {
+        position: relative;
+        transform: translate(-50% -50%);
+        margin-top: 14vw;
+        margin-left: -1.5vw;
+        font-size: 22vw;
+        font-family: sans-serif;
+        animation: preloader-bounce 3s infinite ease-in;
+        opacity: 0;
+        color: rgb(255, 255, 255);
+    }
+
+    @keyframes preloader-bounce {
+
+    0%{
+        opacity: 0;
+        letter-spacing: 100px;
+    }
+    
+    50%{
+        opacity: 1;
+        letter-spacing: 10px;
+    }
+    }
+
+    .loaded_hiding .preloader {
+    transition-delay: 1s;
+    transition: 0.3s opacity;
+    opacity: 0;
+    }
+    
+    .loaded .preloader {
+    transition-delay: 2s;
+    display: none;
+    }

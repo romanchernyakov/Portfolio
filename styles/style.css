@@ -1,0 +1,230 @@
+* {
+	padding: 0;
+	margin: 0;
+	}
+
+body {
+    background-color: rgb(89, 135, 173);
+    overflow: hidden;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+}
+
+.bg {
+    position: relative;
+    height: 100vh;
+}
+
+.bg1 {
+    position: relative;
+    margin-left: -1px;
+    height: 100vh;
+}
+
+.bg img{
+    height: 100vh;
+}
+
+.bg1 img{
+    height: 100vh;
+}
+
+.titleDigital{
+    position: absolute;
+    width: 42.2vh;
+    top: 45.63vh;
+    left: 97.6vh;
+    opacity: 0;
+    transition: 0.2s;
+}
+    .titleDigital:hover {
+        position: absolute;
+        width: 42.2vh;
+        top: 45.63vh;
+        left: 97.6vh;
+        opacity: 1;
+    }
+
+.physical{
+    position: absolute;
+    top: 12.65vh;
+    left: 100.3vh;
+    opacity:0%;
+    transition: 0.2s;
+}
+.physical img {
+    height: 5.55vh;
+}
+    .physical:hover{
+        position: absolute;
+        height: 5.55vh;
+        top: 12.65vh;
+        left: 100.3vh;
+        opacity: 100%;
+    }
+
+.doorDigital{
+    position: absolute;
+    bottom: 12.05vh;
+    left: 142.2vh;
+    z-index: 20;
+    height: 33.1vh;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+    .doorDigital:hover {
+        position: absolute;
+        bottom: 12.05vh;
+        left: 142.2vh;
+        z-index: 20;
+        height: 33.1vh;
+        opacity: 1;
+    }
+
+.titleAbout{
+    position: absolute;
+    width: 29vh;
+    top: 47vh;
+    left: 36.4vh;
+    opacity:0%;
+    transition: 0.2s;
+}
+    .titleAbout:hover {
+        position: absolute;
+        width: 29vh;
+        top: 47vh;
+        left: 36.4vh;
+        opacity: 100%;
+    }
+.doorAbout{
+    position: absolute;
+    bottom: 12.5vh;
+    left: 78.6vh;
+    z-index: 20;
+    height: 32.8vh;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+    .doorAbout:hover {
+        position: absolute;
+        bottom: 12.5vh;
+        left: 78.6vh;
+        z-index: 20;
+        height: 32.8vh;
+        opacity: 1;
+    }
+
+.red img{
+    position: absolute;
+    width: 13.98vh;
+    top: 54.8vh;
+    left: 126vh;
+    opacity: 0%;
+    transition: 0.2s;
+}
+    .red img:hover {
+        position: absolute;
+        width: 13.98vh;
+        top: 54.8vh;
+        left: 126.vh;
+        opacity: 100%;
+    }
+
+.banner {
+    position: absolute;
+    top: 5.7vh;
+    left: 3.3vh;
+    z-index: 20;
+}
+
+.banner img{
+    height: 30.3vh;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+    .banner img:hover{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 20;
+        height: 30.3vh;
+        opacity: 1;
+    }
+
+.anteater {
+    position: absolute;
+    top: 71.3vh;
+    left: 154.8vh;
+    opacity: 0;
+}
+
+.anteater img {
+    height: 17.2vh;
+}
+    .anteater:hover {
+
+        opacity: 1;
+    }
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #45e0ff;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+    }
+    
+    .preloader__row {
+        animation: preloader-rotate 5000ms infinite linear;
+    }
+
+    .loading {
+        transform: translate(-50% -50%);
+        margin-top: -4vw;
+        margin-left: -1.5vw;
+        font-size: 22vw;
+        font-family: sans-serif;
+        animation: preloader-bounce 3s infinite ease-in;
+        opacity: 0;
+        color: rgb(255, 255, 255);
+    }
+
+    @keyframes preloader-bounce {
+
+    0%{
+        opacity: 0;
+        letter-spacing: 100px;
+    }
+    
+    50%{
+        opacity: 1;
+        letter-spacing: 10px;
+    }
+    }
+
+    .loaded_hiding .preloader {
+    transition-delay: 1s;
+    transition: 0.3s opacity;
+    opacity: 0;
+    }
+    
+    .loaded .preloader {
+    transition-delay: 2s;
+    display: none;
+    }
+
+@media screen and (max-width: 800px) {
+    body{
+        overflow-x:visible;
+        overflow-y: hidden;
+    }
+}

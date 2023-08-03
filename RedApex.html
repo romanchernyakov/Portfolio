@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="styles/redapex.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader__row">
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+          <p class="loading" >LOADING</p>
+        </div>
+    </div>
+        
+        <div class="grid-container">
+            <div class="background">
+                <img src="assets/RedApex/background.jpg" alt="">
+            </div>
+            <h1>Red Apex</h1>
+            <p class="p1">Red Apex is the project of creating visual language for a conference. As the main outcomes were performed two posters and one wine bottle label.</p>
+            <img class="small-car" src="assets/RedApex/Layer 5 copy.png" alt="">
+            <img class="big-car" src="assets/RedApex/Layer 6.png" alt="">
+            <p class="p2">The main theme of the conference is the discussion about drunk driving behavior. Some winemakers solidly sure that a couple of wine glasses can noticebly enchance driving skills. To prove that they decided to invite scientists, polititians and even racers to prove their statment in the final race. <br><br>
+                Drunk VS sober.
+            </p>
+            <img class="poster-img" src="assets/RedApex/poster-imagery.png" alt="">
+            <img class="poster-info" src="assets/RedApex/poster-info.png" alt="">
+            <img class="bottle" src="assets/RedApex/BOTTLE 1.png" alt="">
+        </div>
+        <script>
+            window.onload = function () {
+              document.body.classList.add('loaded_hiding');
+              window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+              }, 500);
+            }
+          </script>
+</body>
+</html>
